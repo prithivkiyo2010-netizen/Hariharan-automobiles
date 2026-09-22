@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hariharan Automobiles | Enquiries</title>
+<link rel="stylesheet" href="/style.css">
+<style>
+body{background:#f4f4f2}.admin{max-width:1180px;margin:auto;padding:55px 22px}.admin-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:30px}.table-wrap{overflow:auto;background:#fff;border:1px solid #ddd;border-radius:15px}table{border-collapse:collapse;width:100%;min-width:850px}th,td{text-align:left;padding:14px;border-bottom:1px solid #eee;font-size:13px}th{background:#111;color:#fff}.empty{padding:30px;color:#777}
+</style>
+</head>
+<body>
+<div class="admin">
+  <div class="admin-top">
+    <div><p class="eyebrow">ADMIN</p><h1>Service Enquiries</h1></div>
+    <a class="btn primary" href="/">View Website</a>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>ID</th><th>Name</th><th>Phone</th><th>Vehicle</th><th>Service</th><th>Date</th><th>Message</th><th>Received</th></tr></thead>
+      <tbody id="rows"><tr><td colspan="8" class="empty">Loading...</td></tr></tbody>
+    </table>
+  </div>
+</div>
+<script>
+async function load(){
+ const res=await fetch('/api/bookings'); const data=await res.json();
+ const rows=document.getElementById('rows');
+ if(!data.length){rows.innerHTML='<tr><td colspan="8" class="empty">No enquiries yet.</td></tr>';return;}
+ rows.innerHTML=data.map(x=>`<tr>
+ <td>${x.id}</td><td>${esc(x.name)}</td><td><a href="tel:${esc(x.phone)}">${esc(x.phone)}</a></td>
+ <td>${esc(x.vehicle||'-')}</td><td>${esc(x.service)}</td><td>${esc(x.preferred_date||'-')}</td>
+ <td>${esc(x.message||'-')}</td><td>${esc(x.created_at)}</td></tr>`).join('');
+}
+function esc(s){return String(s).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]))}
+load();
+</script>
+</body>
+</html>

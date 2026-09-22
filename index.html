@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Hariharan Automobiles in Neelankarai, Chennai — car painting, tinkering, dent repair and mechanical services.">
+  <title>Hariharan Automobiles | Neelankarai</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="header">
+    <a class="brand" href="#home">
+      <span class="brand-mark">HA</span>
+      <span><strong>HARIHARAN</strong><small>AUTOMOBILES</small></span>
+    </a>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="nav-call" href="tel:+919884838037">Call Now</a>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <p class="eyebrow">NEELANKARAI • CHENNAI</p>
+        <h1>Bring Your Car<br><span>Back to Life.</span></h1>
+        <p class="hero-copy">Reliable car painting, tinkering, dent repair and mechanical work — with careful hands and honest service.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#booking">Book a Service</a>
+          <a class="btn ghost" href="https://wa.me/919884838037?text=Hi%20Hariharan%20Automobiles,%20I%20would%20like%20to%20enquire%20about%20car%20service." target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+        <div class="quick-points">
+          <span>✓ Body Work</span><span>✓ Painting</span><span>✓ Mechanical</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust-strip">
+      <div><strong>HARIHARAN AUTOMOBILES</strong><span>Local car care in Neelankarai</span></div>
+      <div><strong>3 CORE SERVICES</strong><span>Painting • Tinkering • Mechanic</span></div>
+      <div><strong>DIRECT CONTACT</strong><span>98848 38037</span></div>
+    </section>
+
+    <section id="services" class="section">
+      <div class="section-head">
+        <p class="eyebrow">WHAT WE DO</p>
+        <h2>Complete care for your car.</h2>
+        <p>From body damage to mechanical issues, tell us what your car needs and we’ll help you with the next step.</p>
+      </div>
+      <div class="cards">
+        <article class="service-card">
+          <div class="icon">🎨</div>
+          <h3>Car Painting</h3>
+          <p>Panel painting, colour refresh, scratch-related paint work and finishing.</p>
+          <a href="#booking" data-service="Painting">Enquire →</a>
+        </article>
+        <article class="service-card">
+          <div class="icon">🔧</div>
+          <h3>Tinkering & Dent Repair</h3>
+          <p>Body panel repair, dent correction, alignment and accident-related body work.</p>
+          <a href="#booking" data-service="Tinkering / Dent Repair">Enquire →</a>
+        </article>
+        <article class="service-card">
+          <div class="icon">🛠️</div>
+          <h3>Mechanical Work</h3>
+          <p>General mechanical inspection, maintenance and repair work for cars.</p>
+          <a href="#booking" data-service="Mechanical Work">Enquire →</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="split-section">
+      <div class="photo-card workshop-photo">
+        <div class="photo-label">WORKSHOP • NEELANKARAI</div>
+      </div>
+      <div class="about-copy">
+        <p class="eyebrow">ABOUT US</p>
+        <h2>Local service. Personal attention.</h2>
+        <p>Hariharan Automobiles is a neighbourhood automobile workshop serving customers around Neelankarai, Chennai.</p>
+        <p>We focus on practical body and mechanical work, clear communication and giving each vehicle the attention it needs.</p>
+        <ul class="check-list">
+          <li>Painting & body restoration</li>
+          <li>Tinkering & dent correction</li>
+          <li>Mechanical inspection & repair</li>
+          <li>Used-car related enquiries</li>
+        </ul>
+        <a class="text-link" href="#contact">Talk to the workshop →</a>
+      </div>
+    </section>
+
+    <section id="gallery" class="section dark-section">
+      <div class="section-head light">
+        <p class="eyebrow">WORK GALLERY</p>
+        <h2>Built around real workshop work.</h2>
+        <p>These starter visuals can be replaced with your dad’s actual workshop and completed-car photos anytime.</p>
+      </div>
+      <div class="gallery">
+        <div class="gallery-item g1"><span>Body Repair</span></div>
+        <div class="gallery-item g2"><span>Painting Work</span></div>
+        <div class="gallery-item g3"><span>Mechanical Work</span></div>
+      </div>
+    </section>
+
+    <section id="booking" class="section booking-section">
+      <div class="section-head">
+        <p class="eyebrow">SERVICE ENQUIRY</p>
+        <h2>Tell us what your car needs.</h2>
+        <p>Submit an enquiry and the workshop can contact you. For urgent enquiries, call directly.</p>
+      </div>
+      <form id="bookingForm" class="booking-form">
+        <div class="field"><label>Name *</label><input name="name" required placeholder="Your name"></div>
+        <div class="field"><label>Phone *</label><input name="phone" required type="tel" placeholder="10-digit number"></div>
+        <div class="field"><label>Vehicle</label><input name="vehicle" placeholder="e.g. Hyundai i20"></div>
+        <div class="field"><label>Service *</label>
+          <select name="service" id="serviceSelect" required>
+            <option value="">Choose a service</option>
+            <option>Painting</option>
+            <option>Tinkering / Dent Repair</option>
+            <option>Mechanical Work</option>
+            <option>Used Car Enquiry</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="field"><label>Preferred date</label><input name="preferred_date" type="date"></div>
+        <div class="field full"><label>Message</label><textarea name="message" rows="4" placeholder="Tell us about the issue or damage..."></textarea></div>
+        <button class="btn primary full" type="submit">Send Service Enquiry</button>
+        <p id="formStatus" class="form-status"></p>
+      </form>
+    </section>
+
+    <section id="contact" class="contact-section">
+      <div>
+        <p class="eyebrow">CONTACT</p>
+        <h2>Hariharan Automobiles</h2>
+        <p>Neelankarai, Chennai, Tamil Nadu</p>
+      </div>
+      <div class="contact-actions">
+        <a class="contact-card" href="tel:+919884838037"><span>📞</span><div><small>CALL</small><strong>98848 38037</strong></div></a>
+        <a class="contact-card" href="https://wa.me/919884838037?text=Hi%20Hariharan%20Automobiles,%20I%20would%20like%20to%20enquire." target="_blank" rel="noopener"><span>💬</span><div><small>WHATSAPP</small><strong>Message us</strong></div></a>
+        <a class="contact-card" href="https://www.google.com/maps/search/?api=1&query=Hariharan+Automobiles+Neelankarai+Chennai" target="_blank" rel="noopener"><span>📍</span><div><small>LOCATION</small><strong>Open in Maps</strong></div></a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="brand"><span class="brand-mark">HA</span><span><strong>HARIHARAN</strong><small>AUTOMOBILES</small></span></div>
+    <p>© <span id="year"></span> Hariharan Automobiles. All rights reserved.</p>
+  </footer>
+
+  <script src="/script.js"></script>
+</body>
+</html>
